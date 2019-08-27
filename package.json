@@ -1,6 +1,6 @@
 {
-  "name": "cryptkhen",
-  "version": "1.0.0",
+  "name": "@ryanbekhen/cryptkhen",
+  "version": "0.0.1",
   "description": "Simple security signature",
   "main": "index.js",
   "scripts": {
@@ -8,5 +8,13 @@
   },
   "keywords": [],
   "author": "ryanbekhen",
-  "license": "Apache License 2.0"
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanbekhen/cryptkhen.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ryanbekhen/cryptkhen/issues"
+  },
+  "homepage": "https://github.com/ryanbekhen/cryptkhen#readme"
 }
