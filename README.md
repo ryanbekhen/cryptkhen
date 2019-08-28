@@ -1,4 +1,5 @@
 # CRYPTKHEN
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![npm version](https://badge.fury.io/js/%40ryanbekhen%2Fcryptkhen.svg)](https://badge.fury.io/js/%40ryanbekhen%2Fcryptkhen)
 
 ## Features
@@ -48,6 +49,3 @@ console.log(decryptText);
 
 ## Contributing
 Questions, comments, bug reports, and pull requests are all welcome
-
-## Lisence
-See license [here](https://github.com/ryanbekhen/cryptkhen/blob/master/LICENSE)
