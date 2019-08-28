@@ -18,7 +18,7 @@ npm i @ryanbekhen/cryptkhen
 Generate RSA Key pair:
 ```javascript
 const { SignatureRSA } = require('@ryanbekhen/cryptkhen');
-signatureRSA = new SignatureRSA({
+const signatureRSA = new SignatureRSA({
     modulusLength: 4096
 });
 let signatureKey = signatureRSA.generateKeyPair();
