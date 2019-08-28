@@ -50,4 +50,4 @@ console.log(decryptText);
 Questions, comments, bug reports, and pull requests are all welcome
 
 ## Lisence
-See license [here]('https://github.com/ryanbekhen/cryptkhen/blob/master/LICENSE')
+See license [here](https://github.com/ryanbekhen/cryptkhen/blob/master/LICENSE)
