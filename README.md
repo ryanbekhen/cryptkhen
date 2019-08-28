@@ -19,7 +19,7 @@ Generate RSA Key pair:
 ```javascript
 const { SignatureRSA } = require('@ryanbekhen/cryptkhen');
 signatureRSA = new SignatureRSA({
-    modulusLength: 4096
+    modulusLength: 4096 // Recommended using modulus length 4096
 });
 let signatureKey = signatureRSA.generateKeyPair();
 console.log(signatureKey.publicKey);
