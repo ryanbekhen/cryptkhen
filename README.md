@@ -54,4 +54,4 @@ console.log(result);
 
 ## Contributing
 
-Questions, comments, bug reports, and pull requests are all welcom
+Questions, comments, bug reports, and pull requests are all welcome
