@@ -10,13 +10,17 @@ Cryptkhen is simple module of security signature for encryption data with RSA.
 * Decrypt plain text using private key or public key RSA
 
 ## Installing
+
 ```shell script
 npm i @ryanbekhen/cryptkhen
 ```
+
 > <sub>Requires nodejs >= 10.12.0</sub>
 
 ## Example Code
+
 Generate RSA Key pair:
+
 ```javascript
 const { SignatureRSA } = require('@ryanbekhen/cryptkhen');
 const signatureRSA = new SignatureRSA({
@@ -28,6 +32,7 @@ console.log(signatureKey.privateKey);
 ```
 
 Encrypt text using public key:
+
 ```javascript
 const { RSAEncryption } = require('@ryanbekhen/cryptkhen');
 let encryptText = RSAEncryption.encrypt({
@@ -38,6 +43,7 @@ console.log(encryptText);
 ```
 
 Decrypt text using private key:
+
 ```javascript
 const { RSAEncryption } = require('@ryanbekhen/cryptkhen');
 let decryptText = RSAEncryption.decrypt({
@@ -48,4 +54,5 @@ console.log(decryptText);
 ```
 
 ## Contributing
+
 Questions, comments, bug reports, and pull requests are all welcom
