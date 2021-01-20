@@ -1,10 +1,12 @@
 # CRYPTKHEN
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![npm version](https://badge.fury.io/js/%40ryanbekhen%2Fcryptkhen.svg)](https://badge.fury.io/js/%40ryanbekhen%2Fcryptkhen)
 
 ## Features
 
-Cryptkhen is simple module of security signature for encryption data with RSA.
+Cryptkhen library is a simple security signature module for encrypted data with reference from Node.js
+[crypto module](https://nodejs.org/api/crypto.html).
 
 * Generate Key Pair
 * Encrypt plain text using private key or public key RSA
@@ -13,45 +15,49 @@ Cryptkhen is simple module of security signature for encryption data with RSA.
 ## Installing
 
 ```shell script
-yarn add @ryanbekhen/cryptkhen
+yarn add @ryanbekhen/cryptkhen # yarn package manager
+
+npm i @ryanbekhen/cryptkhen # npm package manager
 ```
 
-><sub>Requires nodejs >= 10.23.1</sub>
+> Requires nodejs >= 10.23.1
 
 ## Example Code
 
-Generate RSA Key pair:
+Load module to project:
+
+```typescript & javascript
+// In Typescript
+import { Cryptkhen } from '@ryanbekhen/cryptkhen';
+const cryptkhen: Cryptkhen = new Cryptkhen();
+
+// In Javascript
+const { Cryptkhen } = require("@ryanbekhen/cryptkhen");
+const cryptkhen = new Cryptkhen();
+```
+
+Generate RSA Key Pair:
 
 ```typescript
-import { Cryptkhen } from '@ryanbekhen/cryptkhen';
-
-const cryptkhen: Cryptkhen = new Cryptkhen();
 const { publicKey, privateKey } = cryptkhen.generateKeypair(2048);
-
-console.log(publicKey);
-console.log(privateKey);
 ```
 
-Encrypt text using public key:
+Encrypt or Decrypt:
 
-```typescript
-import { Cryptkhen } from '@ryanbekhen/cryptkhen';
+```typescript & javascript
+// Encrypt
+const encryptText = cryptkhen.encrypt('Hello World!', publicKey);
 
-const cryptkhen: Cryptkhen = new Cryptkhen();
-const encryptionText: any = cryptkhen.encrypt('test text', publicKey);
-console.log(encryptionText);
+// Decrypt
+const decrypt = cryptkhen.decrypt(encryptText, privateKey);
 ```
 
-Decrypt text using private key:
-
-```typescript
-import { Cryptkhen } from '@ryanbekhen/cryptkhen';
-
-const cryptkhen: Cryptkhen = new Cryptkhen();
-const decrypt: any = cryptkhen.decrypt(encryptionText, privateKey);
-console.log(decrypt);
-```
+If you encrypt using a public key, you must decrypt it using the private key and vice versa.
 
 ## Contributing
 
 Questions, comments, bug reports, and pull requests are all welcome
+
+## Donate
+
+[![npm version](https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=ryanbekhen&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff)](https://www.buymeacoffee.com/ryanbekhen)
