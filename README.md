@@ -16,7 +16,7 @@ Cryptkhen is simple module of security signature for encryption data with RSA.
 yarn add @ryanbekhen/cryptkhen
 ```
 
-><sub>Requires nodejs >= 14.15.1</sub>
+><sub>Requires nodejs >= 10.23.1</sub>
 
 ## Example Code
 
@@ -38,8 +38,8 @@ Encrypt text using public key:
 import { Cryptkhen } from '@ryanbekhen/cryptkhen';
 
 const cryptkhen: Cryptkhen = new Cryptkhen();
-const result: any = cryptkhen.encrypt('test', publicKey);
-console.log(result);
+const encryptionText: any = cryptkhen.encrypt('test text', publicKey);
+console.log(encryptionText);
 ```
 
 Decrypt text using private key:
@@ -48,8 +48,8 @@ Decrypt text using private key:
 import { Cryptkhen } from '@ryanbekhen/cryptkhen';
 
 const cryptkhen: Cryptkhen = new Cryptkhen();
-const result: any = cryptkhen.encrypt('pem key', publicKey);
-console.log(result);
+const decrypt: any = cryptkhen.decrypt(encryptionText, privateKey);
+console.log(decrypt);
 ```
 
 ## Contributing
