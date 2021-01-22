@@ -42,15 +42,22 @@ Generate RSA Key Pair:
 const { publicKey, privateKey } = cryptkhen.generateKeypair(2048);
 ```
 
-Encrypt or Decrypt:
+Encrypt or Decrypt using passphrase:
 
 ```typescript & javascript
+// in generate key pair must have modulus lenght and passphrase 
+const { publicKey, privateKey } = cryptkhen.generateKeypair(2048, 'passphrase');
+
 // Encrypt
 const encryptText = cryptkhen.encrypt('Hello World!', publicKey);
 
 // Decrypt
 const decrypt = cryptkhen.decrypt(encryptText, privateKey);
 ```
+ 
+
+
+
 
 If you encrypt using a public key, you must decrypt it using the private key and vice versa.
 
