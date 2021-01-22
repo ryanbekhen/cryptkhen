@@ -6,7 +6,7 @@ export class SignatureRSA {
   private _privateKeyEncoding: object;
   private _publicKeyEncoding: object;
 
-  constructor(modulusLength?: ModulusLength) {
+  constructor(passphrase: string, modulusLength?: ModulusLength) {
     this._modulusLength = modulusLength === undefined ? 2048 : modulusLength;
     this._publicKeyEncoding = {
       type: 'spki',
@@ -16,7 +16,7 @@ export class SignatureRSA {
       type: 'pkcs8',
       format: 'pem',
       cipher: 'aes-256-cbc',
-      passphrase: '',
+      passphrase: passphrase,
     };
   }
 
