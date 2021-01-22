@@ -54,10 +54,6 @@ const encryptText = cryptkhen.encrypt('Hello World!', publicKey);
 // Decrypt
 const decrypt = cryptkhen.decrypt(encryptText, privateKey);
 ```
- 
-
-
-
 
 If you encrypt using a public key, you must decrypt it using the private key and vice versa.
 
