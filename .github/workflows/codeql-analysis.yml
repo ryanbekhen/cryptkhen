@@ -18,7 +18,7 @@ on:
     # The branches below must be a subset of the branches above
     branches: [ master ]
   schedule:
-    - cron: '29 0 * * 6'
+    - cron: '22 20 * * 6'
 
 jobs:
   analyze:
@@ -59,9 +59,15 @@ jobs:
     #    and modify them (or add more) to build your code if your project
     #    uses a compiled language
 
-    - run:
-       yarn
-       yarn test
+    #- run: |
+    #   make bootstrap
+    #   make release
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
+      
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v2.1.4
+      with:
+        # Version Spec of the version to use.  Examples: 12.x, 10.15.1, >=10.15.0
+        node-version: ">=10.15.0"
