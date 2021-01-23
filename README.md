@@ -77,4 +77,4 @@ Using dollar :
 
 Using IDR:
 
-[![Trakteer](https://trakteer.id/images/mix/navbar-logo-lite.png =100)](https://trakteer.id/ryanbekhen/)
+[Trakteer](https://trakteer.id/ryanbekhen/)
