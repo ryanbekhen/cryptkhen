@@ -12,7 +12,7 @@ export class RSAEncryption {
       cipher = privateEncrypt(
         {
           key: pem,
-          passphrase: passphrase,
+          passphrase,
         },
         buffer,
       );
@@ -32,7 +32,7 @@ export class RSAEncryption {
       plainText = privateDecrypt(
         {
           key: pem,
-          passphrase: passphrase,
+          passphrase,
         },
         buffer,
       );
