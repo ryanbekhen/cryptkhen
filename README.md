@@ -42,12 +42,9 @@ Generate RSA Key Pair:
 const { publicKey, privateKey } = cryptkhen.generateKeypair(2048);
 ```
 
-Encrypt or Decrypt using passphrase:
+Encrypt or Decrypt without passphrase:
 
 ```typescript & javascript
-// in generate key pair must have modulus lenght and passphrase 
-const { publicKey, privateKey } = cryptkhen.generateKeypair(2048, 'passphrase');
-
 // Encrypt
 const encryptText = cryptkhen.encrypt('Hello World!', publicKey);
 
@@ -55,7 +52,18 @@ const encryptText = cryptkhen.encrypt('Hello World!', publicKey);
 const decrypt = cryptkhen.decrypt(encryptText, privateKey);
 ```
 
-If you encrypt using a public key, you must decrypt it using the private key and vice versa.
+> Note: If you encrypt using a public key, you must decrypt it using the private key and vice versa.
+
+Encrypt or Decrypt using passphrase:
+
+```typescript & javascript
+const { publicKey, privateKey } = cryptkhen.generateKeypair(2048, passphrase);
+
+// Encrypt
+const encryptText = cryptkhen.encrypt('Hello World!', publicKey);
+const decrypt = cryptkhen.decrypt(encryptText, privateKey, passphrase);
+```
+> Note: Passphrase is entered into the encrypt or decrypt function parameter if the pemKey is privateKey not publicKey.
 
 ## Contributing
 
@@ -63,4 +71,10 @@ Questions, comments, bug reports, and pull requests are all welcome
 
 ## Donate
 
-[![npm version](https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=ryanbekhen&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff)](https://www.buymeacoffee.com/ryanbekhen)
+Using Dollar :
+
+[![Buy me a coffee](https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=ryanbekhen&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff)](https://www.buymeacoffee.com/ryanbekhen)
+
+Using IDR:
+
+[Trakteer](https://trakteer.id/ryanbekhen/)
