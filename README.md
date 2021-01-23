@@ -42,12 +42,9 @@ Generate RSA Key Pair:
 const { publicKey, privateKey } = cryptkhen.generateKeypair(2048);
 ```
 
-Encrypt or Decrypt using passphrase:
+Encrypt or Decrypt without passphrase:
 
 ```typescript & javascript
-// in generate key pair must have modulus lenght and passphrase 
-const { publicKey, privateKey } = cryptkhen.generateKeypair(2048, 'passphrase');
-
 // Encrypt
 const encryptText = cryptkhen.encrypt('Hello World!', publicKey);
 
@@ -55,7 +52,18 @@ const encryptText = cryptkhen.encrypt('Hello World!', publicKey);
 const decrypt = cryptkhen.decrypt(encryptText, privateKey);
 ```
 
-If you encrypt using a public key, you must decrypt it using the private key and vice versa.
+> Note: If you encrypt using a public key, you must decrypt it using the private key and vice versa.
+
+Encrypt or Decrypt using passphrase:
+
+```typescript & javascript
+const { publicKey, privateKey } = cryptkhen.generateKeypair(2048, passphrase);
+
+// Encrypt
+const encryptText = cryptkhen.encrypt('Hello World!', publicKey);
+const decrypt = cryptkhen.decrypt(encryptText, privateKey, passphrase);
+```
+> Note: Passphrase is entered into the encrypt or decrypt function parameter if the pemKey is privateKey not publicKey.
 
 ## Contributing
 
