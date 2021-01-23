@@ -1,6 +1,6 @@
 {
   "name": "@ryanbekhen/cryptkhen",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "description": "Simple security signature",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
