@@ -16,14 +16,20 @@
     "postversion": "git push && git push --tags"
   },
   "keywords": [],
-  "author": "ryanbekhen",
-  "license": "Apache-2.0",
-  "repository": "https://github.com/ryanbekhen/cryptkhen.git",
-  "bugs": "https://github.com/ryanbekhen/cryptkhen/issues",
-  "homepage": "https://github.com/ryanbekhen/cryptkhen#readme",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+  "author": {
+    "name": "Achmad Irianto Eka Putra",
+    "email": "ryanbekhen.official@gmail.com",
+    "url": "https://www.ryanbekhen.me"
   },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryanbekhen/cryptkhen.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ryanbekhen/cryptkhen/issues"
+  },
+  "homepage": "https://github.com/ryanbekhen/cryptkhen#readme",
   "devDependencies": {
     "@types/jest": "^26.0.20",
     "jest": "^26.6.3",
