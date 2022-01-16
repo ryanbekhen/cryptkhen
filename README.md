@@ -67,14 +67,4 @@ const decrypt = cryptkhen.decrypt(encryptText, privateKey, passphrase);
 
 ## Contributing
 
-Questions, comments, bug reports, and pull requests are all welcome
-
-## Donate
-
-Using Dollar :
-
-[![Buy me a coffee](https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=ryanbekhen&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff)](https://www.buymeacoffee.com/ryanbekhen)
-
-Using IDR:
-
-[Trakteer](https://trakteer.id/ryanbekhen/)
+Questions, comments, bug reports, and pull requests are all welcome.
