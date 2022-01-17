@@ -16,7 +16,14 @@
     "postversion": "git push && git push --tags",
     "start:dev": "ts-node examples/index.ts"
   },
-  "keywords": [],
+  "keywords": [
+    "rsa",
+    "aes-256",
+    "encryption",
+    "decryption",
+    "cryptography",
+    "crypto"
+  ],
   "author": {
     "name": "Achmad Irianto Eka Putra",
     "email": "ryanbekhen.official@gmail.com",
