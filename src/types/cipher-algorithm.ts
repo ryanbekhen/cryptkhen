@@ -1,1 +1,0 @@
-export type CipherAlgorithm = 'aes-256-cbc' | 'aes-256-gcm';

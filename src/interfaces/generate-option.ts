@@ -1,6 +1,6 @@
-import { BitLength } from "../types";
+import { BitLength } from '../types';
 
 export interface GenerateOption {
-  passphrase?: string ;
-  bitLength?: BitLength
+  passphrase?: string;
+  bitLength?: BitLength;
 }
