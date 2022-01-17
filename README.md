@@ -1,7 +1,7 @@
 # CRYPTKHEN
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![npm version](https://badge.fury.io/js/%40ryanbekhen%2Fcryptkhen.svg)](https://badge.fury.io/js/%40ryanbekhen%2Fcryptkhen)
+[![npm version](https://badge.fury.io/js/@ryanbekhen%2Fcryptkhen.svg)](https://badge.fury.io/js/@ryanbekhen%2Fcryptkhen)
 
 Node.js library for simple implementation of encryption, decryption and digital signatures based on the Node.js [crypto module](https://nodejs.org/api/crypto.html)
 
