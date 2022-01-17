@@ -89,7 +89,7 @@ export class RSAEncryption {
   }
 
   /**
-   *
+   * verify signature authenticity
    * @param publicKey - public key RSA
    * @param signature - RSA digital signature
    * @param verifiableData - verifiable data in the form of strings or buffers
