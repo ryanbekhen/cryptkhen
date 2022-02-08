@@ -1,5 +1,5 @@
 {
-  "name": "cryptkhen",
+  "name": "@ryanbekhen/cryptkhen",
   "version": "3.0.2",
   "description": "Simple security signature",
   "main": "lib/index.js",
@@ -47,8 +47,5 @@
   },
   "files": [
     "lib/**/*"
-  ],
-  "directories": {
-    "test": "test"
-  }
+  ]
 }
