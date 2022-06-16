@@ -37,7 +37,7 @@
   "homepage": "https://github.com/ryanbekhen/cryptkhen#readme",
   "devDependencies": {
     "@types/jest": "^27.4.0",
-    "@types/node": "^17.0.9",
+    "@types/node": "^18.0.0",
     "jest": "^27.4.7",
     "prettier": "^2.2.1",
     "ts-jest": "^27.1.3",
