@@ -35,17 +35,18 @@ export class RSAEncryption {
   }
 
   /**
-   * Encrypt text
+   * Encrypt text on cryptkhen by default using an oaep hash with the SHA256 algorithm
    * @param publicKey - public key RSA
    * @param data - data to be encrypted
+   * @param isEnableOaepHash - value false if not using oaep hash (default: true)
    * @returns base64 of encrypted data
    */
-  encrypt(publicKey: string | Buffer, data: string): string {
+  encrypt(publicKey: string | Buffer, data: string, isEnableOaepHash: boolean = true): string {
     const encrypted = publicEncrypt(
       {
         key: publicKey,
         padding: constants.RSA_PKCS1_OAEP_PADDING,
-        oaepHash: 'SHA256',
+        oaepHash: isEnableOaepHash ? 'SHA256' : undefined,
       },
       Buffer.isBuffer(data) ? data : Buffer.from(data),
     );
@@ -53,18 +54,24 @@ export class RSAEncryption {
   }
 
   /**
-   * Decrypt text
+   * Decrypt text on cryptkhen by default using an oaep hash with the SHA256 algorithm
    * @param privateKey - private key RSA
    * @param encrypted - base64 of encrypted data
+   * @param isEnableOaepHash - value false if not using oaep hash (default: true)
    * @param passphrase - optional passphrase
    * @returns decryption result
    */
-  decrypt(privateKey: string | Buffer, encrypted: string, passphrase?: string): string {
+  decrypt(
+    privateKey: string | Buffer,
+    encrypted: string,
+    isEnableOaepHash: boolean = true,
+    passphrase?: string,
+  ): string {
     const decrypted = privateDecrypt(
       {
         key: privateKey,
         padding: constants.RSA_PKCS1_OAEP_PADDING,
-        oaepHash: 'SHA256',
+        oaepHash: isEnableOaepHash ? 'SHA256' : undefined,
         passphrase: passphrase ? passphrase : '',
       },
       Buffer.from(encrypted, 'base64'),
