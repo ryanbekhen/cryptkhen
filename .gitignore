@@ -9,3 +9,6 @@ lib/
 node_modules/
 
 .npmrc
+
+.idea
+.vscode
